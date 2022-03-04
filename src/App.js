@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Header from "./components/Header/Header";
+import HomePage from "./pages/HomePage";
+import RecentlyAdded from "./pages/RecentlyAdded";
+import styles from "./App.module.scss";
+import axios from "axios";
 
 function App() {
+  const [data, setData] = useState([]);
+
+  const getData = () => {
+    axios
+      .get("https://6220e384afd560ea69a0fc79.mockapi.io/comments")
+      .then((result) => {
+        setData(result.data);
+      }, []);
+  };
+
+  useEffect(() => {
+    getData();
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+
+      <div className={styles.container}>
+        <HomePage data={data} />
+
+        <RecentlyAdded data={data} />
+      </div>
+    </>
   );
 }
 

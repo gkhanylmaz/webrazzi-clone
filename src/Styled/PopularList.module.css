@@ -1,0 +1,59 @@
+.popularTable {
+  margin: 0;
+  border-radius: 8px;
+  height: 50%;
+  padding: 0;
+  background: transparent;
+  position: inherit;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(26, 32, 44, 0.8);
+          box-shadow: 0 1px 3px 0 rgba(26, 32, 44, 0.8);
+}
+
+.popularTable .popularTables {
+  height: 100%;
+  background-color: #fff;
+}
+
+.popularTable .dayPopular {
+  background-color: #e1e1e2;
+  padding: 20px 24px;
+  border-radius: 8px 8px 0 0;
+}
+
+.popularTable .dayPopular h1 {
+  font-size: 26px;
+}
+
+.popularTable .populerText {
+  height: 100%;
+}
+
+.popularTable h2 {
+  font-size: 20px;
+}
+
+.popularTable h2:hover {
+  border-bottom: 3px solid #f3d02e;
+  letter-spacing: normal;
+  cursor: pointer;
+  display: inline;
+}
+
+.popularTable .title {
+  border-bottom: 1px solid #f2f2f3;
+  padding: 20px;
+  margin: 10px;
+}
+
+.popularTable .title a {
+  color: #7a8085;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 10px;
+  display: block;
+}
+/*# sourceMappingURL=PopularList.module.css.map */

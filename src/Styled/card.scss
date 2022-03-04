@@ -1,0 +1,63 @@
+$shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+
+.card {
+  width: 720px;
+  height: 190px;
+  position: relative;
+  box-shadow: $shadow;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 16px 16px 16px 24px;
+
+  .under {
+    background-color: yellow;
+    width: 20px;
+    height: 5px;
+    position: absolute;
+    top: 30px;
+    left: -10px;
+  }
+  .card-title {
+    display: flex;
+
+    .card-section {
+      width: 60%;
+      display: block;
+
+      .card-time {
+        display: flex;
+      }
+
+      a {
+        color: #7a8085;
+        font-size: 14px;
+        line-height: 1.7;
+        display: block;
+        padding-right: 2rem;
+      }
+      p {
+        color: #7a8085;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      h2 {
+        font-size: 20px;
+        &:hover {
+          display: inline;
+          border-bottom: 3px #f3d02e solid;
+          cursor: pointer;
+        }
+      }
+    }
+    .card-image {
+      width: 40%;
+
+      img {
+        width: 100%;
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+}
