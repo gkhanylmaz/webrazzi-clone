@@ -1,0 +1,129 @@
+@charset "UTF-8";
+.wbTv {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#19191a), to(#363738));
+  background-image: linear-gradient(to bottom, #19191a, #363738);
+  padding: 80px 60px 100px 60px;
+  margin: -50px -60px;
+  border-radius: 10px;
+}
+
+.wbTv .wbVideo .tvLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.wbTv .wbVideo .tvLogo .logo {
+  width: 80px;
+  height: 64px;
+}
+
+.wbTv .wbVideo .tvLogo a {
+  color: #fff;
+}
+
+.wbTv .wb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wbTv .wb .wbSection {
+  position: relative;
+  width: 66%;
+}
+
+.wbTv .wb .wbSection img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.wbTv .wb .wbSection .tvVideo {
+  width: 100%;
+}
+
+.wbTv .wb .wbSection .videoTime {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  color: #fff;
+  opacity: 0.7;
+  border-radius: 2px;
+  background-color: #000;
+  padding: 4px 8px;
+  bottom: 24px;
+}
+
+.wbTv .wb .wbTitle {
+  padding: 0 30px;
+  color: #fff;
+}
+
+.wbTv .wb .wbTitle h2 {
+  position: absolute;
+  bottom: 50px;
+}
+
+.wbTv .videoCards {
+  width: 34%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.wbTv .videoCards .videoCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.wbTv .videoCards .videoCard .cardİmage {
+  width: 100%;
+  position: relative;
+}
+
+.wbTv .videoCards .videoCard .cardİmage .videoTime {
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  color: #fff;
+  opacity: 0.7;
+  border-radius: 2px;
+  background-color: #000;
+}
+
+.wbTv .videoCards .videoCard .cardİmage img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.wbTv .videoCards .videoTitle {
+  margin-left: 10px;
+}
+
+.wbTv .videoCards .videoTitle h2 {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.6;
+}
+/*# sourceMappingURL=WbTv.module.css.map */

@@ -5,6 +5,7 @@ import RecentlyAdded from "./pages/RecentlyAdded";
 import styles from "./App.module.scss";
 import axios from "axios";
 import WbTv from "components/WbTv";
+import Card from "components/Card";
 
 function App() {
   const [data, setData] = useState([]);
@@ -29,7 +30,8 @@ function App() {
         <HomePage data={data} />
 
         <RecentlyAdded data={data} />
-        <WbTv />
+        <WbTv data={data.slice(19, 23)} />
+        <Card data={data} />
       </div>
     </>
   );
