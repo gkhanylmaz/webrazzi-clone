@@ -1,22 +1,22 @@
 import React from "react";
-import "../Styled/home.css";
+import styles from "../Styled/Home.module.scss";
 
 const Home = ({ data }) => {
   return (
-    <div className="home-section">
+    <div className={styles.HomeSection}>
       {data.map((der) => (
         <>
-          <div className="home-img">
+          <div className={styles.HomeImage}>
             <img src={der.image} alt="home-img" />
           </div>
-          <div className="home-left-title">
-            <div className="home-title">
+          <div className={styles.LeftTitle}>
+            <div className={styles.HomeTitle}>
               <h2> {der.title}</h2>
             </div>
-            <div className="home-pr">
+            <div className={styles.HomePr}>
               <p>{der.explanation}</p>
             </div>
-            <div className="home-time">
+            <div className={styles.HomeTime}>
               <a href="/">{der.writer}</a>
               <p> {der.time}</p>
             </div>

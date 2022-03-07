@@ -1,4 +1,4 @@
-.home-section {
+.HomeSection {
   margin-top: 10px;
   width: 80%;
   img {
@@ -13,11 +13,11 @@
       border: 1px solid rgba(0, 0, 0, 0.16);
     }
   }
-  .home-left-title {
+  .LeftTitle {
     width: 100%;
     margin-top: 2rem;
 
-    .home-title {
+    .HomeTitle {
       margin-bottom: 1rem;
 
       h2:hover {
@@ -28,7 +28,7 @@
       }
     }
 
-    .home-pr {
+    .HomePr {
       font-size: 18px;
       font-weight: 400;
       font-stretch: normal;
@@ -38,7 +38,7 @@
       margin-top: 16px;
       color: #525659;
     }
-    .home-time {
+    .HomeTime {
       display: flex;
       margin-top: 1rem;
 

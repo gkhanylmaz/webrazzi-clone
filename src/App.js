@@ -8,6 +8,7 @@ import WbTv from "components/WbTv";
 import Card from "components/Card";
 import WbActivity from "components/WbActivity";
 import WbKariyer from "components/WbKariyer";
+import WbRapor from "components/WbRapor";
 
 function App() {
   const [data, setData] = useState([]);
@@ -27,17 +28,16 @@ function App() {
   return (
     <>
       <Header />
-
       <div className={styles.container}>
         <HomePage data={data} />
-
         <RecentlyAdded data={data} />
         <WbTv data={data.slice(19, 23)} />
         <Card data={data.slice(23, 29)} />
         <WbActivity data={data.slice(29, 32)} />
         <Card data={data.slice(32, 38)} />
-        <WbKariyer />
-        <Card data={data} />
+        <WbKariyer data={data.slice(38, 41)} />
+        <Card data={data.slice(41, 46)} />
+        <WbRapor />
       </div>
     </>
   );

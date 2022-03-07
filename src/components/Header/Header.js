@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "logo.svg";
-import styles from "./header.module.scss";
+import styles from "./Header.module.scss";
 import { FiSearch, FiBell, FiUser } from "react-icons/fi";
 
 const Header = () => {
@@ -8,13 +8,13 @@ const Header = () => {
     <>
       <header>
         <div className={styles.container}>
-          <div className={styles.navbar}>
+          <div className={styles.Navbar}>
             <a href="/">
               {" "}
               <img src={logo} alt="logo" />
             </a>
-            <div className={styles.delimiter}></div>
-            <ul className={styles.navList}>
+            <div className={styles.Delimiter}></div>
+            <ul className={styles.NavList}>
               <li>
                 <a href="/"> Kategoriler</a>{" "}
               </li>
@@ -28,7 +28,7 @@ const Header = () => {
                 <a href="/"> Kariyer</a>{" "}
               </li>
             </ul>
-            <div className={styles.navIcons}>
+            <div className={styles.NavIcons}>
               <a href="/">
                 {" "}
                 <FiSearch />

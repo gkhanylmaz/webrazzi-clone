@@ -1,26 +1,27 @@
 import React from "react";
+import styles from "../Styled/Card.module.scss";
 
 const Card2 = ({ ren }) => {
   return (
-    <div>
-      <div className="card">
-        <div className="under"> </div>
-        <div className="card-title">
-          <div className="card-section">
+    <>
+      <div className={styles.Card}>
+        <div className={styles.Under}> </div>
+        <div className={styles.CardTitle}>
+          <div className={styles.CardSection}>
             <a href="/"> {ren.category}</a>
             <h2> {ren.title}</h2>
             <p> {ren.explanation} </p>
-            <div className="card-time">
+            <div className={styles.CardTime}>
               <a href="/"> {ren.writer}</a>
               <p> {ren.time}</p>
             </div>
           </div>
-          <div className="card-image">
+          <div className={styles.CardImage}>
             <img src={ren.image} alt={ren.writer} />
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
