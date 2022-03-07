@@ -6,6 +6,7 @@ import styles from "./App.module.scss";
 import axios from "axios";
 import WbTv from "components/WbTv";
 import Card from "components/Card";
+import WbActivity from "components/WbActivity";
 
 function App() {
   const [data, setData] = useState([]);
@@ -31,7 +32,9 @@ function App() {
 
         <RecentlyAdded data={data} />
         <WbTv data={data.slice(19, 23)} />
-        <Card data={data} />
+        <Card data={data.slice(23, 29)} />
+        <WbActivity data={data.slice(29, 32)} />
+        <Card data={data.slice(32, 38)} />
       </div>
     </>
   );

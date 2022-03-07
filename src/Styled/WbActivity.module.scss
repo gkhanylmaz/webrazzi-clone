@@ -1,0 +1,86 @@
+.WbActivity {
+  background-image: linear-gradient(to bottom, #19191a, #363738);
+  padding: 80px 60px 100px 60px;
+  margin: -50px -60px;
+  border-radius: 10px;
+  .ActivityLogo {
+    margin-bottom: 20px;
+    img {
+      width: 200px;
+    }
+  }
+
+  .ActivityCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .ActivityCard {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      margin-left: 20px;
+
+      .CardImage {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .CardTitle {
+    margin-bottom: 50px;
+    .TimeLocation {
+      display: flex;
+      margin-top: 10px;
+
+      p {
+        margin: 0 20px;
+        font-size: 14px;
+        color: #7a8085;
+      }
+    }
+    .title {
+      margin-left: 20px;
+      h3 {
+        font-size: 24px;
+        line-height: 1.33;
+        color: #19191a;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 14px;
+        color: #7a8085;
+      }
+    }
+  }
+  .CardButons {
+    display: flex;
+    margin: 20px 30px;
+
+    .DarkBtn {
+      background-color: #f3d02e;
+      color: #4d451a;
+      border: none;
+      padding: 16px 16px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 50%;
+      margin-right: 7px;
+    }
+    .LightBtn {
+      background-color: #fff;
+      color: #4d451a;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      width: 50%;
+      margin-left: 7px;
+
+      cursor: pointer;
+    }
+  }
+}
