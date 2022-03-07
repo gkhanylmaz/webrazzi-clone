@@ -1,0 +1,43 @@
+.WbKariyer {
+  background-image: linear-gradient(to bottom, #19191a, #363738);
+  padding: 80px 60px 100px 60px;
+  margin: -50px -60px;
+  border-radius: 10px;
+
+  .KariyerHead {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    img {
+      width: 200px;
+    }
+  }
+  .KariyerCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .KariyerCard {
+    display: flex;
+    background-color: #fff;
+    width: 95%;
+    border-radius: 10px;
+
+    .CardImage {
+      width: 25%;
+      margin-top: 5px;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .CardTitle {
+      line-height: 3;
+      margin-left: 10px;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import axios from "axios";
 import WbTv from "components/WbTv";
 import Card from "components/Card";
 import WbActivity from "components/WbActivity";
+import WbKariyer from "components/WbKariyer";
 
 function App() {
   const [data, setData] = useState([]);
@@ -35,6 +36,8 @@ function App() {
         <Card data={data.slice(23, 29)} />
         <WbActivity data={data.slice(29, 32)} />
         <Card data={data.slice(32, 38)} />
+        <WbKariyer />
+        <Card data={data} />
       </div>
     </>
   );

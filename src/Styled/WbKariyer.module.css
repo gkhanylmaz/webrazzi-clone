@@ -1,0 +1,58 @@
+.WbKariyer {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#19191a), to(#363738));
+  background-image: linear-gradient(to bottom, #19191a, #363738);
+  padding: 80px 60px 100px 60px;
+  margin: -50px -60px;
+  border-radius: 10px;
+}
+
+.WbKariyer .KariyerHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.WbKariyer .KariyerHead a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.WbKariyer .KariyerHead img {
+  width: 200px;
+}
+
+.WbKariyer .KariyerCards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.WbKariyer .KariyerCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  width: 95%;
+  border-radius: 10px;
+}
+
+.WbKariyer .KariyerCard .CardImage {
+  width: 25%;
+  margin-top: 5px;
+}
+
+.WbKariyer .KariyerCard img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.WbKariyer .KariyerCard .CardTitle {
+  line-height: 3;
+  margin-left: 10px;
+}
+/*# sourceMappingURL=WbKariyer.module.css.map */
