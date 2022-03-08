@@ -8,7 +8,7 @@ import WbTv from "components/WbTv";
 import Card from "components/Card";
 import WbActivity from "components/WbActivity";
 import WbKariyer from "components/WbKariyer";
-import WbRapor from "components/WbRapor";
+import Footer from "components/Footer";
 
 function App() {
   const [data, setData] = useState([]);
@@ -37,8 +37,8 @@ function App() {
         <Card data={data.slice(32, 38)} />
         <WbKariyer data={data.slice(38, 41)} />
         <Card data={data.slice(41, 46)} />
-        <WbRapor />
       </div>
+      <Footer />
     </>
   );
 }

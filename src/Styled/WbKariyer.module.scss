@@ -14,7 +14,7 @@
       color: #fff;
     }
     img {
-      width: 200px;
+      width: 150px;
     }
   }
   .KariyerCards {
@@ -29,15 +29,21 @@
 
     .CardImage {
       width: 25%;
-      margin-top: 5px;
+      margin-top: 10px;
     }
     img {
       width: 100%;
       border-radius: 10px;
     }
     .CardTitle {
-      line-height: 3;
-      margin-left: 10px;
+      margin: 10px 20px;
+      width: 75%;
+
+      h3 {
+        font-size: 18px;
+        color: #19191a;
+        height: 70px;
+      }
     }
   }
 }
