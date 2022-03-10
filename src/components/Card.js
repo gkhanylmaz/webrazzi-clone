@@ -5,7 +5,7 @@ const Card = ({ data }) => {
   return (
     <div>
       {data.map((ren, index) => (
-        <Card2 key={index} ren={ren} />
+        <Card2 key={index} {...ren} />
       ))}
     </div>
   );

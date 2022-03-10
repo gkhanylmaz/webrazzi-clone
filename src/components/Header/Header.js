@@ -1,14 +1,20 @@
-import React from "react";
 import logo from "logo.svg";
 import styles from "./Header.module.scss";
-import { FiSearch, FiBell, FiUser } from "react-icons/fi";
+import { FiSearch, FiBell, FiUser, FiMenu } from "react-icons/fi";
 
 const Header = () => {
+  const openNav = () => {
+    document.getElementById("mySidenav").style.width = "100vw";
+  };
   return (
     <>
       <header>
         <div className={styles.container}>
           <div className={styles.Navbar}>
+            <button className={styles.MenuIcons} onClick={openNav}>
+              {" "}
+              <FiMenu />
+            </button>
             <a href="/">
               {" "}
               <img src={logo} alt="logo" />

@@ -14,7 +14,7 @@ const WbKariyer = ({ data }) => {
         </div>
         <div className={styles.KariyerCards}>
           {data.map((der, index) => (
-            <div className={styles.KariyerCard}>
+            <div className={styles.KariyerCard} key={index}>
               <div className={styles.CardImage}>
                 <img src={der.image} alt="card-image2" />
               </div>

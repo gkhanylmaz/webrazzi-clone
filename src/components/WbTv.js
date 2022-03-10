@@ -34,8 +34,8 @@ const WbTv = ({ data }) => {
           </div>
 
           <div className={styles.videoCards}>
-            {data.map((der, index) => (
-              <VideoCard der={der} key={index} />
+            {data.map((el, index) => (
+              <VideoCard {...el} key={index} />
             ))}
           </div>
         </div>

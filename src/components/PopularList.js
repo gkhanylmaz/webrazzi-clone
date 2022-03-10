@@ -6,7 +6,7 @@ const PopularList = ({ data }) => {
   return (
     <>
       {data.map((der, index) => (
-        <div className={styles.popularText}>
+        <div className={styles.popularText} key={index}>
           <div className={styles.title}>
             <h2> {der.title}</h2>
             <a href="/"> {der.writer}</a>

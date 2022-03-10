@@ -4,7 +4,7 @@ import styles from "../Styled/Home.module.scss";
 const Home = ({ data }) => {
   return (
     <div className={styles.HomeSection}>
-      {data.map((der) => (
+      {data.map((der, index) => (
         <>
           <div className={styles.HomeImage}>
             <img src={der.image} alt="home-img" />

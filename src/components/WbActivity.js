@@ -10,10 +10,10 @@ const WbActivity = ({ data }) => {
           alt="activity-logo"
         />
       </div>
-      <div classname={styles.ActivitySection}>
+      <div className={styles.ActivitySection}>
         <div className={styles.ActivityCards}>
           {data.map((der, index) => (
-            <ActivityCard der={der} key={der.index} />
+            <ActivityCard der={der} key={index} />
           ))}
         </div>
       </div>

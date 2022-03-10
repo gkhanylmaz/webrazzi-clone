@@ -9,6 +9,8 @@ import Card from "components/Card";
 import WbActivity from "components/WbActivity";
 import WbKariyer from "components/WbKariyer";
 import Footer from "components/Footer";
+import Added from "components/Added";
+import SideBar from "components/SideBar";
 
 function App() {
   const [data, setData] = useState([]);
@@ -26,10 +28,13 @@ function App() {
   });
 
   return (
-    <>
+    <div className={styles.App}>
       <Header />
+      <SideBar />
+
       <div className={styles.container}>
         <HomePage data={data} />
+        <Added />
         <RecentlyAdded data={data} />
         <WbTv data={data.slice(19, 23)} />
         <Card data={data.slice(23, 29)} />
@@ -39,7 +44,7 @@ function App() {
         <Card data={data.slice(41, 46)} />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
