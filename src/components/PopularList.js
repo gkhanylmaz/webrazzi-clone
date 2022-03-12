@@ -2,14 +2,13 @@ import React from "react";
 import styles from "../Styled/PopularList.module.scss";
 
 const PopularList = ({ data }) => {
-  //   console.log(der.title);
   return (
     <>
-      {data.map((der, index) => (
+      {data.map((el, index) => (
         <div className={styles.popularText} key={index}>
           <div className={styles.title}>
-            <h2> {der.title}</h2>
-            <a href="/"> {der.writer}</a>
+            <h2> {el.title}</h2>
+            <a href="/"> {el.writer}</a>
           </div>
         </div>
       ))}

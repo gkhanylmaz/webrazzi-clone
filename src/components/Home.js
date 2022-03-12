@@ -4,21 +4,21 @@ import styles from "../Styled/Home.module.scss";
 const Home = ({ data }) => {
   return (
     <div className={styles.HomeSection}>
-      {data.map((der, index) => (
+      {data.map((el, index) => (
         <>
           <div className={styles.HomeImage}>
-            <img src={der.image} alt="home-img" />
+            <img src={el.image} alt="home-img" />
           </div>
           <div className={styles.LeftTitle}>
             <div className={styles.HomeTitle}>
-              <h2> {der.title}</h2>
+              <h2> {el.title}</h2>
             </div>
             <div className={styles.HomePr}>
-              <p>{der.explanation}</p>
+              <p>{el.explanation}</p>
             </div>
             <div className={styles.HomeTime}>
-              <a href="/">{der.writer}</a>
-              <p> {der.time}</p>
+              <a href="/">{el.writer}</a>
+              <p> {el.time}</p>
             </div>
           </div>
         </>

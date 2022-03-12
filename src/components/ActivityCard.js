@@ -1,21 +1,21 @@
 import React from "react";
 import styles from "../Styled/WbActivity.module.scss";
 
-const ActivityCard = ({ der }) => {
+const ActivityCard = ({ title, explanation, image, time, category }) => {
   return (
     <div>
       <div className={styles.ActivityCard}>
         <div className={styles.CardImage}>
-          <img src={der.image} alt="card-images" />
+          <img src={image} alt="card-images" />
         </div>
         <div className={styles.CardTitle}>
           <div className={styles.TimeLocation}>
-            <p> {der.time} </p>
-            <p> {der.category}</p>
+            <p> {time} </p>
+            <p> {category}</p>
           </div>
           <div className={styles.title}>
-            <h3>{der.title}</h3>
-            <p>{der.explanation}</p>
+            <h3>{title}</h3>
+            <p>{explanation}</p>
           </div>
         </div>
         <div className={styles.CardButons}>

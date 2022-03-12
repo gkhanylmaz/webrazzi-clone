@@ -12,8 +12,8 @@ const WbActivity = ({ data }) => {
       </div>
       <div className={styles.ActivitySection}>
         <div className={styles.ActivityCards}>
-          {data.map((der, index) => (
-            <ActivityCard der={der} key={index} />
+          {data.map((el, index) => (
+            <ActivityCard {...el} key={index} />
           ))}
         </div>
       </div>

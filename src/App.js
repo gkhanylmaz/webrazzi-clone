@@ -11,6 +11,7 @@ import WbKariyer from "components/WbKariyer";
 import Footer from "components/Footer";
 import Added from "components/Added";
 import SideBar from "components/SideBar";
+import SearchPage from "components/SearchPage";
 
 function App() {
   const [data, setData] = useState([]);
@@ -44,6 +45,7 @@ function App() {
         <Card data={data.slice(41, 46)} />
       </div>
       <Footer />
+      <SearchPage />
     </div>
   );
 }

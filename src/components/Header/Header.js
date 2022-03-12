@@ -3,15 +3,20 @@ import styles from "./Header.module.scss";
 import { FiSearch, FiBell, FiUser, FiMenu } from "react-icons/fi";
 
 const Header = () => {
-  const openNav = () => {
+  const openSide = () => {
     document.getElementById("mySidenav").style.width = "100vw";
   };
+  const openSearch = () => {
+    document.getElementById("SearchPage").style.width = "100%";
+    document.getElementById("SearchInsights").style.width = "40%";
+  };
+
   return (
     <>
       <header>
         <div className={styles.container}>
           <div className={styles.Navbar}>
-            <button className={styles.MenuIcons} onClick={openNav}>
+            <button className={styles.MenuIcons} onClick={openSide}>
               {" "}
               <FiMenu />
             </button>
@@ -35,18 +40,9 @@ const Header = () => {
               </li>
             </ul>
             <div className={styles.NavIcons}>
-              <a href="/">
-                {" "}
-                <FiSearch />
-              </a>
-              <a href="/">
-                {" "}
-                <FiBell />
-              </a>
-              <a href="/">
-                {" "}
-                <FiUser />
-              </a>
+              <FiSearch onClick={openSearch} className={styles.Icons} />{" "}
+              <FiBell className={styles.Icons} />{" "}
+              <FiUser className={styles.Icons} />
             </div>
           </div>
         </div>

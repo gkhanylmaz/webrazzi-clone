@@ -4,8 +4,8 @@ import Card2 from "./Card2";
 const Card = ({ data }) => {
   return (
     <div>
-      {data.map((ren, index) => (
-        <Card2 key={index} {...ren} />
+      {data.map((el, index) => (
+        <Card2 key={index} {...el} />
       ))}
     </div>
   );
