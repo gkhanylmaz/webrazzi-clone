@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Styled/WbTv.module.scss";
+import styles from "./WbTv.module.scss";
 import VideoCard from "./VideoCard";
 
 const WbTv = ({ data }) => {

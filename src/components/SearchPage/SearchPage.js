@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "../Styled/SearchPage.module.scss";
+import styles from "./SearchPage.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../logo.svg";
+import logo from "../../image/logo.svg";
 
 const SearchPage = () => {
   const closeSearch = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../Styled/Footer.module.scss";
-import logo from "logo.svg";
+import styles from "./Footer.module.scss";
+import logo from "../../image/logo.svg";
 import {
   AiOutlineTwitter,
   AiFillLinkedin,

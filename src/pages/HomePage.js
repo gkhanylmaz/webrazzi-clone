@@ -1,6 +1,6 @@
 import React from "react";
-import Highlights from "components/Higliht/Highlights";
-import Home from "components/Home";
+import Highlights from "components/Highlights/Highlights";
+import Home from "components/Home/Home";
 
 const HomePage = ({ data }) => {
   return (

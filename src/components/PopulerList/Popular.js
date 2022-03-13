@@ -1,6 +1,6 @@
 import React from "react";
 import PopularList from "./PopularList";
-import styles from "../Styled/PopularList.module.scss";
+import styles from "./PopularList.module.scss";
 
 const Popular = ({ data }) => {
   return (
@@ -10,7 +10,9 @@ const Popular = ({ data }) => {
           <div className={styles.dayPopular}>
             <h1> Bugün popüler</h1>
           </div>
-          <PopularList data={data} />
+          {data.map((el, index) => (
+            <PopularList {...el} key={index} />
+          ))}
         </div>
       </div>
     </>

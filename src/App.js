@@ -4,14 +4,15 @@ import HomePage from "./pages/HomePage";
 import RecentlyAdded from "./pages/RecentlyAdded";
 import styles from "./App.module.scss";
 import axios from "axios";
-import WbTv from "components/WbTv";
-import Card from "components/Card";
-import WbActivity from "components/WbActivity";
-import WbKariyer from "components/WbKariyer";
-import Footer from "components/Footer";
-import Added from "components/Added";
-import SideBar from "components/SideBar";
-import SearchPage from "components/SearchPage";
+import WbTv from "components/WebrazziTv/WbTv";
+import Card from "components/Card/Card";
+import WbActivity from "components/WbActivity/WbActivity";
+import WbKariyer from "components/WebrazziKariyer/WbKariyer";
+import Footer from "components/Footer/Footer";
+import Added from "components/Added/Added";
+import SideBar from "components/Sidebar/SideBar";
+import SearchPage from "components/SearchPage/SearchPage";
+import Buttons from "components/Buttons/Buttons";
 
 function App() {
   const [data, setData] = useState([]);
@@ -43,6 +44,7 @@ function App() {
         <Card data={data.slice(32, 38)} />
         <WbKariyer data={data.slice(38, 41)} />
         <Card data={data.slice(41, 46)} />
+        <Buttons />
       </div>
       <Footer />
       <SearchPage />

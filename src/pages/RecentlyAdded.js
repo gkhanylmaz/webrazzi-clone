@@ -1,6 +1,6 @@
-import Popular from "components/Popular";
+import Popular from "components/PopulerList/Popular";
 import React from "react";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 
 const RecentlyAdded = ({ data }) => {
   return (

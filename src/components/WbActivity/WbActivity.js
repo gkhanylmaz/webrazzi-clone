@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Styled/WbActivity.module.scss";
+import styles from "./WbActivity.module.scss";
 import ActivityCard from "./ActivityCard";
 const WbActivity = ({ data }) => {
   return (

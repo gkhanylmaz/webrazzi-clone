@@ -1,6 +1,6 @@
-import styles from "../Styled/SideBar.module.scss";
+import styles from "./SideBar.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../logo.svg";
+import logo from "../../image/logo.svg";
 
 const SideBar = () => {
   const closeSidebar = () => {

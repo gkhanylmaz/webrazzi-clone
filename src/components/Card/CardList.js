@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Styled/Card.module.scss";
+import styles from "./Card.module.scss";
 
 const Card2 = ({ category, writer, image, title, explanation, time }) => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Styled/WbActivity.module.scss";
+import styles from "./WbActivity.module.scss";
 
 const ActivityCard = ({ title, explanation, image, time, category }) => {
   return (

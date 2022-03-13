@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Styled/Added.module.scss";
+import styles from "./Added.module.scss";
 
 const Added = () => {
   return (

@@ -1,4 +1,4 @@
-import logo from "logo.svg";
+import logo from "../../image/logo.svg";
 import styles from "./Header.module.scss";
 import { FiSearch, FiBell, FiUser, FiMenu } from "react-icons/fi";
 
