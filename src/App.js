@@ -33,6 +33,7 @@ function App() {
     <div className={styles.App}>
       <Header />
       <SideBar />
+      <SearchPage />
 
       <div className={styles.container}>
         <HomePage data={data} />
@@ -44,10 +45,9 @@ function App() {
         <Card data={data.slice(32, 38)} />
         <WbKariyer data={data.slice(38, 41)} />
         <Card data={data.slice(41, 46)} />
-        <Buttons />
+        <Buttons data={data} />
       </div>
       <Footer />
-      <SearchPage />
     </div>
   );
 }

@@ -1,14 +1,21 @@
 import logo from "../../image/logo.svg";
 import styles from "./Header.module.scss";
 import { FiSearch, FiBell, FiUser, FiMenu } from "react-icons/fi";
+import Login from "components/Login";
+import { useState } from "react";
 
 const Header = () => {
   const openSide = () => {
     document.getElementById("mySidenav").style.width = "100vw";
   };
   const openSearch = () => {
-    document.getElementById("SearchPage").style.width = "100%";
+    document.getElementById("SearchPage").style.width = "100vw";
     document.getElementById("SearchInsights").style.width = "40%";
+  };
+  const [loginCard, setloginCard] = useState(false);
+
+  const CardLogin = () => {
+    setloginCard(!loginCard);
   };
 
   return (
@@ -26,8 +33,26 @@ const Header = () => {
             </a>
             <div className={styles.Delimiter}></div>
             <ul className={styles.NavList}>
-              <li>
+              <li className={styles.Dropdown}>
                 <a href="/"> Kategoriler</a>{" "}
+                <ul>
+                  <li>
+                    {" "}
+                    <a href="/"> Kategori 1</a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="/"> Kategori 2</a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="/"> Kategori 3</a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="/"> Kategori 4</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="/"> Konular</a>
@@ -42,7 +67,8 @@ const Header = () => {
             <div className={styles.NavIcons}>
               <FiSearch onClick={openSearch} className={styles.Icons} />{" "}
               <FiBell className={styles.Icons} />{" "}
-              <FiUser className={styles.Icons} />
+              <FiUser className={styles.Icons} onClick={CardLogin} />
+              {loginCard ? <Login /> : false}
             </div>
           </div>
         </div>

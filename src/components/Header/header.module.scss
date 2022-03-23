@@ -26,9 +26,11 @@ li {
 
 header {
   border-top: 4px solid #f3d02e;
+  top: 0;
   z-index: 999;
-  position: relative;
+  position: sticky;
   transition: border-top-color 0.5s ease-in-out;
+  background: #fff;
 
   .Navbar {
     height: 76px;
@@ -39,6 +41,7 @@ header {
 
     .MenuIcons {
       color: #7a8085;
+      background: transparent;
 
       margin-right: 15px;
       font-size: 30px;
@@ -61,15 +64,51 @@ header {
     .NavList {
       display: flex;
       margin-right: 20rem;
+      margin-top: 10px;
 
       li {
         margin: 0 30px;
         display: inline-block;
+        position: relative;
+
+        &:hover ul {
+          display: block;
+        }
 
         a {
           font-weight: 600;
           line-height: 1, 33;
           color: $gray-dark;
+        }
+      }
+    }
+    .Dropdown {
+      min-height: 40px;
+      align-items: center;
+      ul {
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background: #fff;
+        width: 270px;
+        position: absolute;
+        border-radius: 4px;
+        top: 40px;
+
+        border: 1px solid;
+        display: none;
+        li {
+          width: 100%;
+          margin: 0 5px;
+
+          &:hover {
+            background-color: #fffaf0;
+          }
+        }
+        a {
+          color: #19191a;
+          display: block;
+          line-height: 44px;
+          font-weight: 400;
         }
       }
     }
