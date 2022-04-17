@@ -1,12 +1,10 @@
-import React, { useState } from "react";
 import styles from "./Login.module.scss";
-import LoginPage from "./LoginPage";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [login, setLogin] = useState(false);
-
-  const loginClose = () => {
-    setLogin(!login);
+  const navigate = useNavigate();
+  const LoginPage = () => {
+    navigate("/login");
   };
 
   return (
@@ -18,7 +16,7 @@ function Login() {
         <div className={styles.LoginLink}>
           <button
             className={`${styles.Btn} ${styles.LoginBtn}`}
-            onClick={loginClose}
+            onClick={LoginPage}
           >
             {" "}
             Giriş Yap
@@ -29,7 +27,6 @@ function Login() {
           </button>
         </div>
       </div>
-      {login ? <LoginPage /> : false}
     </div>
   );
 }

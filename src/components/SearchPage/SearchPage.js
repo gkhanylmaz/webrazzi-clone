@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SearchPage.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import logo from "../../image/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const SearchPage = () => {
+  const navigate = useNavigate();
+  const [searchText, setSearchText] = useState();
+
   const closeSearch = () => {
     document.getElementById("SearchPage").style.width = "0";
     document.getElementById("SearchInsights").style.width = "0";
+  };
+
+  const handleKeyPress = (e) => {
+    setSearchText(e.target.value);
+    e.preventDefault();
+  };
+
+  const handleEnterPress = (e) => {
+    // e.preventDefault();
+
+    navigate(`/search/${searchText}`);
   };
 
   return (
@@ -20,7 +35,14 @@ const SearchPage = () => {
         </div>
         <div className={styles.WebrazziSearch}>
           <div className={styles.SearchLists}>
-            <input type="text" placeholder="Webrazzi'de arayın..." />
+            <form onSubmit={handleEnterPress}>
+              <input
+                type="text"
+                placeholder="Webrazzi'de arayın..."
+                value={searchText}
+                onChange={handleKeyPress}
+              />
+            </form>
             <p> SON EKLENENLER</p>
             <div className={styles.SearchList}>
               <ul>
