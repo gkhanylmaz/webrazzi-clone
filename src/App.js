@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import HomePage from "./pages/HomePage";
 import RecentlyAdded from "./pages/RecentlyAdded";
 import styles from "./App.module.scss";
@@ -14,10 +16,11 @@ import SideBar from "components/Sidebar/SideBar";
 import SearchPage from "components/SearchPage/SearchPage";
 import Buttons from "components/Buttons/Buttons";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginPage from "components/LoginPage";
+import Signin from "components/Signin";
 import SingleSearchPage from "pages/SingleSearchPage";
 import SingleNewPage from "pages/SingleNewPage";
-import NewPage from "pages/NewPage";
+import SignUp from "components/SignUp";
+
 // import NewPage from "pages/NewPage";
 
 function App() {
@@ -55,11 +58,7 @@ function App() {
                 <Added />
                 <RecentlyAdded data={data} />
                 <WbTv data={data.slice(19, 23)} />
-                <Card
-                  data={data.slice(23, 29)}
-                  path="/newPage"
-                  element={<NewPage />}
-                />
+                <Card data={data.slice(23, 29)} />
                 <WbActivity data={data.slice(29, 32)} />
                 <Card data={data.slice(32, 38)} />
                 <WbKariyer data={data.slice(38, 41)} />
@@ -68,12 +67,14 @@ function App() {
               </div>
             }
           />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/Signin" element={<Signin />} />
+          <Route path="/SignUp" element={<SignUp />} />
         </Routes>
         <SideBar />
         <SearchPage />
         <Footer />
       </div>
+      <ToastContainer />
     </BrowserRouter>
   );
 }

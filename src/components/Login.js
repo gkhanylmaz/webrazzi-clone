@@ -3,8 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
-  const LoginPage = () => {
-    navigate("/login");
+  const Signin = () => {
+    navigate("/Signin");
+  };
+
+  const SignUp = () => {
+    navigate("/SignUp");
   };
 
   return (
@@ -16,12 +20,15 @@ function Login() {
         <div className={styles.LoginLink}>
           <button
             className={`${styles.Btn} ${styles.LoginBtn}`}
-            onClick={LoginPage}
+            onClick={Signin}
           >
             {" "}
             Giriş Yap
           </button>
-          <button className={`${styles.Btn} ${styles.RegisterBtn}`}>
+          <button
+            className={`${styles.Btn} ${styles.RegisterBtn}`}
+            onClick={SignUp}
+          >
             {" "}
             Kayıt Ol
           </button>

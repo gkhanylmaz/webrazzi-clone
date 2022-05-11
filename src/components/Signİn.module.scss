@@ -72,41 +72,65 @@
       color: #19191a;
       margin-bottom: 1rem;
     }
-  }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    label {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #19191a;
-    }
-    input {
-      height: 48px;
-      box-shadow: 0 0 0 1px #e5e5e6;
-      border: 0;
-      padding: 0 12px;
-      color: #2e3132;
-      margin-bottom: 2rem;
-    }
+    form {
+      display: flex;
+      flex-direction: column;
 
-    input:focus {
+      label {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #19191a;
+        display: flex;
+      }
+
+      .passwordIcon {
+        position: relative;
+        input {
+          height: 48px;
+          box-shadow: 0 0 0 1px #e5e5e6;
+          border: 0;
+          padding: 0 12px;
+          color: #2e3132;
+          margin-bottom: 2rem;
+          width: 100%;
+        }
+
+        img {
+          cursor: pointer;
+          position: absolute;
+          padding: 1rem;
+          right: 1.5rem;
+          top: 23px;
+        }
+      }
+
+      input {
+        height: 48px;
+        box-shadow: 0 0 0 1px #e5e5e6;
+        border: 0;
+        padding: 0 12px;
+        color: #2e3132;
+        margin-bottom: 2rem;
+      }
+
+      input:focus {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        outline: none;
+      }
+    }
+    .LoginBtn {
+      background: #f3d02e;
+      color: #4d451a;
+      padding: 16px 16px;
+      border: none;
+      margin: 0.5rem;
+      cursor: pointer;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      outline: none;
+      padding: 20px 20px;
+      font-size: 16px;
+      float: right;
     }
-  }
-  .LoginBtn {
-    background: #f3d02e;
-    color: #4d451a;
-    padding: 16px 16px;
-    border: none;
-    margin: 0.5rem;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 20px 20px;
-    font-size: 16px;
-    float: right;
   }
 }
