@@ -9,13 +9,10 @@ function SingleNewPage({ data }) {
     if (el.id === newID) return true;
     return false;
   });
-  console.log(filteredData);
 
   return (
     <div>
-      {filteredData.map((el, index) => (
-        <Card filteredData={filteredData} />
-      ))}
+      <Card {...filteredData[0]} />
     </div>
   );
 }

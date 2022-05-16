@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import styles from "./SearchPage.module.scss";
+import styles from "./Search.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import logo from "../../image/logo.svg";
 import { useNavigate } from "react-router-dom";
 
-const SearchPage = () => {
+const Search = () => {
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState();
 
@@ -158,4 +158,4 @@ const SearchPage = () => {
   );
 };
 
-export default SearchPage;
+export default Search;

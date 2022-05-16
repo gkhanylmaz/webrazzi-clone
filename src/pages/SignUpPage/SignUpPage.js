@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import styles from "./Signİn.module.scss";
-import logo from "../../src/image/logo.svg";
+import styles from "./SignUpPage.module.scss";
+import logo from "image/logo.svg";
 import { useNavigate } from "react-router-dom";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 import visibilityIcon from "image/visibilityIcon.svg";
 import { toast } from "react-toastify";
 

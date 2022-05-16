@@ -1,4 +1,4 @@
-import Card from "components/Card/Card";
+import ListCards from "components/ListCards/ListCards";
 import React from "react";
 import { useParams } from "react-router-dom";
 
@@ -23,7 +23,7 @@ function SingleSearchPage({ data }) {
         paddingTop: "20px",
       }}
     >
-      <Card data={filteredData} />
+      <ListCards data={filteredData} />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import logo from "../../image/logo.svg";
 import styles from "./Header.module.scss";
 import { FiSearch, FiBell, FiUser, FiMenu } from "react-icons/fi";
-import Login from "components/Login";
+import Login from "components/Login/Login";
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({ user }) => {
   const openSide = () => {
     document.getElementById("mySidenav").style.width = "100vw";
   };
@@ -68,7 +68,7 @@ const Header = () => {
               <FiSearch onClick={openSearch} className={styles.Icons} />{" "}
               <FiBell className={styles.Icons} />{" "}
               <FiUser className={styles.Icons} onClick={CardLogin} />
-              {loginCard ? <Login /> : false}
+              {loginCard ? <Login onClick={CardLogin} user={user} /> : false}
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import styles from "./Buttons.module.scss";
 import React, { useState } from "react";
-import Card from "../Card/Card";
+import ListCards from "components/ListCards/ListCards";
 
 const Buttons = ({ data }) => {
   const [number1, setNumber1] = useState(0);
@@ -13,7 +13,7 @@ const Buttons = ({ data }) => {
 
   return (
     <>
-      <Card data={data.slice(number1, number2)} />
+      <ListCards data={data.slice(number1, number2)} />
       <div className={styles.Buttons}>
         <button
           className={`${styles.BigBtn} ${styles.Btn}`}

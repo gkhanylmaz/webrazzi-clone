@@ -1,19 +1,33 @@
 import React from "react";
-import Card2 from "./CardList";
 import { useNavigate } from "react-router-dom";
+import styles from "./Card.module.scss";
 
-const Card = ({ data }) => {
+const Card = ({ category, writer, image, title, explanation, time, id }) => {
   const navigate = useNavigate();
-
-  const newPage = () => {
-    navigate("./newPage");
+  const handleCardClick = () => {
+    navigate(`/news/${id}`);
   };
+
   return (
-    <div onClick={newPage}>
-      {data.map((el, index) => (
-        <Card2 key={index} {...el} />
-      ))}
-    </div>
+    <>
+      <div className={styles.Card} onClick={handleCardClick}>
+        <div className={styles.Under}> </div>
+        <div className={styles.CardTitle}>
+          <div className={styles.CardSection}>
+            <a href="/"> {category}</a>
+            <h2> {title}</h2>
+            <p> {explanation} </p>
+            <div className={styles.CardTime}>
+              <a href="/"> {writer}</a>
+              <p> {time}</p>
+            </div>
+          </div>
+          <div className={styles.CardImage}>
+            <img src={image} alt={writer} />
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

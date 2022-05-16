@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
-import styles from "./Signİn.module.scss";
-import logo from "../../src/image/logo.svg";
+import styles from "./SignInPage.module.scss";
+import logo from "image/logo.svg";
 import { useNavigate } from "react-router-dom";
 import visibilityIcon from "image/visibilityIcon.svg";
-function Signİn() {
+function SignInPage({ onSubmittion }) {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
@@ -35,6 +35,7 @@ function Signİn() {
       );
 
       if (userCredential.user) {
+        onSubmittion(userCredential.user);
         navigate("/");
       }
     } catch (error) {
@@ -113,4 +114,4 @@ function Signİn() {
   );
 }
 
-export default Signİn;
+export default SignInPage;

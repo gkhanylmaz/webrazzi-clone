@@ -1,6 +1,6 @@
 import React from "react";
-import PopularList from "./PopularList";
-import styles from "./PopularList.module.scss";
+import PopularCard from "./PopularCard";
+import styles from "./PopularCard.module.scss";
 
 const Popular = ({ data }) => {
   return (
@@ -11,7 +11,7 @@ const Popular = ({ data }) => {
             <h1> Bugün popüler</h1>
           </div>
           {data.map((el, index) => (
-            <PopularList {...el} key={index} />
+            <PopularCard {...el} key={index} />
           ))}
         </div>
       </div>
