@@ -1,4 +1,4 @@
-import Card from "components/Card/Card";
+import NewPage from "pages/NewPage";
 import React from "react";
 import { useParams } from "react-router-dom";
 
@@ -12,7 +12,9 @@ function SingleNewPage({ data }) {
 
   return (
     <div>
-      <Card {...filteredData[0]} />
+      {filteredData.map((el, index) => (
+        <NewPage {...el} key={index} />
+      ))}
     </div>
   );
 }
