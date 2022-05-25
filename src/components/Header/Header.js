@@ -1,5 +1,5 @@
 import logo from "../../image/logo.svg";
-import styles from "./header.module.scss";
+import styles from "./Header.module.scss";
 import { FiSearch, FiBell, FiUser, FiMenu } from "react-icons/fi";
 import Login from "components/Login/Login";
 import { useState } from "react";
