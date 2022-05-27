@@ -1,3 +1,4 @@
+@import "../../media-queries.scss";
 .High {
   .HighTitle {
     font-size: 30px;
@@ -7,6 +8,11 @@
   .Highlights {
     display: flex;
     margin: 20px 20px;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
 
     .HighTitles {
       padding-left: 20px;
