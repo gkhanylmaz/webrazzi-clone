@@ -16,7 +16,7 @@ const Card = ({ category, writer, image, title, explanation, time, id }) => {
           <div className={styles.CardSection}>
             <a href="/"> {category}</a>
             <h2> {title}</h2>
-            <p> {explanation} </p>
+            <p> {explanation.substring(0, 100)} </p>
             <div className={styles.CardTime}>
               <a href="/"> {writer}</a>
               <p> {time}</p>

@@ -1,3 +1,5 @@
+@import "../../media-queries.scss";
+
 .WbKariyer {
   background-image: linear-gradient(to bottom, #19191a, #363738);
   padding: 80px 60px 100px 60px;
@@ -20,12 +22,21 @@
   .KariyerCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
   .KariyerCard {
     display: flex;
     background-color: #fff;
     width: 95%;
     border-radius: 10px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
 
     .CardImage {
       width: 25%;

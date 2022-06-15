@@ -18,9 +18,7 @@ const HomePage = ({ data }) => {
   return (
     <div className={styles.HomePage}>
       <div className={styles.container}>
-        <div
-          style={{ display: "flex", flexDirection: "row", marginTop: "20px" }}
-        >
+        <div className={styles.HomePage}>
           <Home data={data.slice(0, 1)} />
           <Highlights data={data} />
         </div>

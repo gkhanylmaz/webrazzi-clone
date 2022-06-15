@@ -96,6 +96,7 @@ header {
         display: none;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         margin: auto;
+
         li {
           margin: 0 1px;
           display: block;
@@ -114,6 +115,7 @@ header {
   }
   .NavIcons {
     display: flex;
+
     .Icons {
       margin: 0 20px;
       color: $gray-dark;

@@ -1,7 +1,6 @@
 $shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
-
 .Card {
-  width: 720px;
+  width: 90%;
   height: 190px;
   position: relative;
   box-shadow: $shadow;
@@ -51,7 +50,7 @@ $shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
       }
     }
     .CardImage {
-      width: 40% !important;
+      width: 40%;
 
       img {
         width: 100%;

@@ -1,8 +1,11 @@
+@import "../../media-queries.scss";
+
 .WbActivity {
   background-image: linear-gradient(to bottom, #19191a, #363738);
   padding: 80px 60px 100px 60px;
   margin: -50px -60px;
   border-radius: 10px;
+
   .ActivityLogo {
     margin-bottom: 20px;
     margin-left: 10px;
@@ -15,6 +18,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
     .ActivityCard {
       display: flex;
       flex-direction: column;
@@ -25,6 +33,10 @@
         width: 100%;
         img {
           width: 100%;
+
+          @include tablet {
+            width: 50%;
+          }
         }
       }
     }
@@ -59,6 +71,10 @@
   .CardButons {
     display: flex;
     margin: 20px 30px;
+
+    @include tablet {
+      flex-direction: column;
+    }
 
     .DarkBtn {
       background-color: #f3d02e;
