@@ -12,5 +12,5 @@ const Added = ({ data }) => {
     </>
   );
 };
-asdasdasdasdasdas
+
 export default Added;
