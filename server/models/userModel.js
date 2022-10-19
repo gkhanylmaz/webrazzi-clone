@@ -18,10 +18,6 @@ const userSchema = mongoose.Schema({
         enum: ['USER', 'ADMIN'],
         default: 'USER'
     },
-    phoneNumber: {
-        type: String,
-        required: true
-    },
 })
 
 export default mongoose.model('User', userSchema)

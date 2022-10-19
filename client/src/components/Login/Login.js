@@ -3,21 +3,21 @@ import { useNavigate } from "react-router-dom";
 
 function Login({ onClick, user }) {
   const navigate = useNavigate();
-  const Signin = () => {
+  const signIn = () => {
     onClick();
-    navigate("/Signin");
+    navigate("/signin");
   };
 
-  const SignUp = () => {
+  const signUp = () => {
     onClick();
-    navigate("/SignUp");
+    navigate("/signup");
   };
-
+ console.log(user)
   return (
     <div className={styles.LoginCard}>
-      {user.displayName ? (
+      {user.fullname ? (
         <div style={{ display: "flex", justifyContent: "center" }}>
-          {user?.displayName?.toUpperCase()}
+          {user?.fullname?.toUpperCase()}
         </div>
       ) : (
         <div className={styles.CardTitle}>
@@ -27,14 +27,14 @@ function Login({ onClick, user }) {
           <div className={styles.LoginLink}>
             <button
               className={`${styles.Btn} ${styles.LoginBtn}`}
-              onClick={Signin}
+              onClick={signIn}
             >
               {" "}
               Giriş Yap
             </button>
             <button
               className={`${styles.Btn} ${styles.RegisterBtn}`}
-              onClick={SignUp}
+              onClick={signUp}
             >
               {" "}
               Kayıt Ol

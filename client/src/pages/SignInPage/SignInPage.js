@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { toast } from "react-toastify";
 import styles from "./SignInPage.module.scss";
 import logo from "image/logo.svg";
 import { useNavigate } from "react-router-dom";
 import visibilityIcon from "image/visibilityIcon.svg";
-function SignInPage({ onSubmittion }) {
+import {login}  from "../../axios/index";
+
+
+
+function SignInPage({setUser, handleSubmission }) {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
@@ -15,33 +17,6 @@ function SignInPage({ onSubmittion }) {
 
   const navigate = useNavigate();
 
-  const onChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.id]: e.target.value,
-    }));
-  };
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const auth = getAuth();
-
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-
-      if (userCredential.user) {
-        onSubmittion(userCredential.user);
-        navigate("/");
-      }
-    } catch (error) {
-      toast.error("Bad User Credentials");
-    }
-  };
   return (
     <div className={styles.LoginPage}>
       <div className={styles.container}>
@@ -81,13 +56,27 @@ function SignInPage({ onSubmittion }) {
             </div>
             <div className={styles.Form}>
               <h3> Giriş Yap</h3>
-              <form onSubmit={onSubmit}>
+              <form onSubmit={(e) => {
+              e.preventDefault();
+
+              login(formData)
+                .then((res) => {
+                  localStorage.setItem("user", JSON.stringify(res.data.user));
+                  setUser(res.data.user);
+                  navigate("/");
+                })
+                .catch((err) => {
+                  console.log(err.response.data.message);
+                });
+            }}>
                 <label for="E-posta"> E-posta</label>
                 <input
                   type="email"
                   id="email"
                   value={email}
-                  onChange={onChange}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                 />
                 <div className={styles.passwordIcon}>
                   <label for="Şifre"> Şifre</label>
@@ -95,7 +84,9 @@ function SignInPage({ onSubmittion }) {
                     type={showPassword ? "text" : "password"}
                     id="password"
                     value={password}
-                    onChange={onChange}
+                    onChange={(e) =>
+                      setFormData({ ...formData, password: e.target.value })
+                    }
                   />
                   <img
                     src={visibilityIcon}
@@ -104,7 +95,7 @@ function SignInPage({ onSubmittion }) {
                     onClick={() => setShowPassword((prevState) => !prevState)}
                   />
                 </div>
-                <button className={styles.LoginBtn}> Giriş Yap</button>
+                <button className={styles.LoginBtn} type="submit"> Giriş Yap</button>
               </form>
             </div>
           </div>

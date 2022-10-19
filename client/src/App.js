@@ -54,9 +54,9 @@ function App() {
           <Route path="/" element={<HomePage data={data} />} />
           <Route
             path="/Signin"
-            element={<SignInPage onSubmittion={handleSubmission} />}
+            element={<SignInPage onSubmittion={handleSubmission} setUser={setUser} />}
           />
-          <Route path="/SignUp" element={<SignUpPage />} />
+          <Route path="/SignUp" element={<SignUpPage/>} />
         </Routes>
         <SideBar />
         <Search />
