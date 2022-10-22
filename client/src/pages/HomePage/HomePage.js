@@ -13,6 +13,7 @@ import Home from "components/Home/Home";
 
 // styles
 import styles from "./HomePage.module.scss";
+import Ribbon from "antd/lib/badge/Ribbon";
 
 const HomePage = ({ data }) => {
   return (
@@ -25,9 +26,11 @@ const HomePage = ({ data }) => {
         <Added />
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr",
-            marginTop: "100px",
+            display: "flex",
+            flexWrap: "wrap",
+            marginRight: "-15px",
+            marginLeft: "-15px",
+            marginTop: "150px",
           }}
         >
           <ListCards data={data.slice(6, 13)} />

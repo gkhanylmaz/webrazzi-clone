@@ -42,7 +42,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className={styles.App}>
-        <Header user={user} />
+        <Header user={user} setUser={setUser} />
         <Routes>
           <Route
             path="/search/:searchText"
@@ -54,9 +54,11 @@ function App() {
           <Route path="/" element={<HomePage data={data} />} />
           <Route
             path="/Signin"
-            element={<SignInPage onSubmittion={handleSubmission} setUser={setUser} />}
+            element={
+              <SignInPage onSubmittion={handleSubmission} setUser={setUser} />
+            }
           />
-          <Route path="/SignUp" element={<SignUpPage/>} />
+          <Route path="/SignUp" element={<SignUpPage />} />
         </Routes>
         <SideBar />
         <Search />

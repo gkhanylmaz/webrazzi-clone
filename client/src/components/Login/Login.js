@@ -1,7 +1,8 @@
+import React, { useEffect } from "react";
 import styles from "./Login.module.scss";
 import { useNavigate } from "react-router-dom";
 
-function Login({ onClick, user }) {
+function Login({ onClick, user, setUser }) {
   const navigate = useNavigate();
   const signIn = () => {
     onClick();
@@ -12,7 +13,12 @@ function Login({ onClick, user }) {
     onClick();
     navigate("/signup");
   };
- console.log(user)
+
+  useEffect(() => {
+    if (localStorage.getItem("user") && !user) {
+      setUser(JSON.parse(localStorage.getItem("user")));
+    }
+  }, [user]);
   return (
     <div className={styles.LoginCard}>
       {user.fullname ? (

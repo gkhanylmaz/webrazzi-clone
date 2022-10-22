@@ -1,61 +1,63 @@
 $shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
-.Card {
-  width: 90%;
-  height: 190px;
-  position: relative;
-  box-shadow: $shadow;
-  background-color: white;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  padding: 16px 16px 16px 24px;
+.postCard {
+  .Card {
+    padding: 16px 16px 16px 24px;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    margin-bottom: 16px;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+    .Under {
+      background-color: #f3d02e;
+      width: 20px;
+      height: 5px;
+      position: absolute;
+      top: 30px;
+      left: -10px;
+    }
+    .CardTitle {
+      display: flex;
 
-  .Under {
-    background-color: #f3d02e;
-    width: 20px;
-    height: 5px;
-    position: absolute;
-    top: 30px;
-    left: -10px;
-  }
-  .CardTitle {
-    display: flex;
+      .CardSection {
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
 
-    .CardSection {
-      width: 60%;
-      display: block;
+        .CardTime {
+          display: flex;
+        }
 
-      .CardTime {
-        display: flex;
-      }
-
-      a {
-        color: #7a8085;
-        font-size: 14px;
-        line-height: 1.7;
-        display: block;
-        padding-right: 2rem;
-      }
-      p {
-        color: #7a8085;
-        font-size: 16px;
-        line-height: 1.7;
-      }
-      h2 {
-        font-size: 20px;
-        &:hover {
-          display: inline;
-          border-bottom: 3px #f3d02e solid;
-          cursor: pointer;
+        a {
+          color: #7a8085;
+          font-size: 14px;
+          line-height: 1.7;
+          display: block;
+          padding-right: 2rem;
+        }
+        p {
+          color: #7a8085;
+          font-size: 16px;
+          line-height: 1.7;
+        }
+        h2 {
+          font-size: 20px;
+          &:hover {
+            display: inline;
+            border-bottom: 3px #f3d02e solid;
+            cursor: pointer;
+          }
         }
       }
-    }
-    .CardImage {
-      width: 40%;
+      .CardImage {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
 
-      img {
-        width: 100%;
-        display: block;
-        cursor: pointer;
+        img {
+          width: 100%;
+          display: block;
+          cursor: pointer;
+          border-radius: 3px;
+        }
       }
     }
   }

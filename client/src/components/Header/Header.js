@@ -4,7 +4,7 @@ import { FiSearch, FiBell, FiUser, FiMenu } from "react-icons/fi";
 import Login from "components/Login/Login";
 import { useState } from "react";
 
-const Header = ({ user }) => {
+const Header = ({ user, setUser }) => {
   const openSide = () => {
     document.getElementById("mySidenav").style.width = "100vw";
   };
@@ -68,7 +68,11 @@ const Header = ({ user }) => {
               <FiSearch onClick={openSearch} className={styles.Icons} />{" "}
               <FiBell className={styles.Icons} />{" "}
               <FiUser className={styles.Icons} onClick={CardLogin} />
-              {loginCard ? <Login onClick={CardLogin} user={user} /> : false}
+              {loginCard ? (
+                <Login onClick={CardLogin} user={user} setUser={setUser} />
+              ) : (
+                false
+              )}
             </div>
           </div>
         </div>
